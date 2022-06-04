@@ -16,6 +16,7 @@
         "main main main"
         "main main main"
         "footer footer footer";
+    width: auto;
 }
 
 /* HEADER */
@@ -24,6 +25,7 @@
     background-image: url(../img/fondo-principal-bajo.png);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .portadaLogo {
@@ -359,10 +361,12 @@
     padding: 4rem;
 }
 
-.formulario ,.contacto{
+.formulario,
+.contacto {
     padding: 1rem;
 }
-.form{
+
+.form {
     width: 100%;
 }
 
@@ -372,32 +376,41 @@
 }
 
 .form input[type=text],
-.form input[type=email], form textarea {
+.form input[type=email],
+form textarea {
     padding-bottom: .5rem;
     outline: none;
-    border-bottom: solid 2px  #ccc;
+    border-bottom: solid 2px #ccc;
     font-size: medium;
     margin-bottom: 2rem;
 }
+
 .form input[type=text],
-.form input[type=email]{
+.form input[type=email] {
     width: 50%;
 }
+
 .form input[type=text]:focus,
-.form input[type=email]:focus,form textarea:focus{
+.form input[type=email]:focus,
+form textarea:focus {
     border-bottom: solid 2px #151D1B;
 }
-.apellido,.motivo{
+
+.apellido,
+.motivo {
     margin-left: 1rem;
 }
-.form textarea{
+
+.form textarea {
     resize: none;
     width: 100%;
 }
-.contacto{
+
+.contacto {
     align-self: flex-start;
-    justify-self:center;
+    justify-self: center;
 }
+
 /* FOOTER */
 .footer {
     grid-area: footer;
@@ -418,9 +431,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding: 2rem;
-
+    /* justify-content: center; */
+    /* padding: 2rem; */
+    align-self: center;
 }
 
 .redesContacto p {
@@ -454,3 +467,56 @@
 }
 
 /* Responsive - Media query */
+/* Tamaño mobile */
+@media (max-width: 425px) {
+
+    /* Inicio */
+    .contenedorInicio {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "footer";
+    }
+
+    .acaInicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .nosotrosInicio p {
+        font-size: 1.5rem;
+    }
+
+    .acaInicio h2 {
+        font-size: 2rem;
+    }
+
+    .redesContacto {
+        padding: .5rem;
+        /* width: 100%; */
+    }
+
+    .navBar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    .navBar li {
+        width: 100%;
+    }
+    .header{
+        background-position: 50%;
+    }
+}
