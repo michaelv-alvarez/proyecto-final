@@ -356,10 +356,10 @@
 .contenedorGeneral {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+    padding: 4rem;
 }
 
-.formulario {
+.formulario ,.contacto{
     padding: 1rem;
 }
 .form{
@@ -375,13 +375,17 @@
 .form input[type=email], form textarea {
     padding-bottom: .5rem;
     outline: none;
-    border-bottom: solid 2px #151D1B;
+    border-bottom: solid 2px  #ccc;
     font-size: medium;
     margin-bottom: 2rem;
 }
 .form input[type=text],
 .form input[type=email]{
     width: 50%;
+}
+.form input[type=text]:focus,
+.form input[type=email]:focus,form textarea:focus{
+    border-bottom: solid 2px #151D1B;
 }
 .apellido,.motivo{
     margin-left: 1rem;
@@ -390,7 +394,10 @@
     resize: none;
     width: 100%;
 }
-
+.contacto{
+    align-self: flex-start;
+    justify-self:center;
+}
 /* FOOTER */
 .footer {
     grid-area: footer;
@@ -445,3 +452,5 @@
     flex-direction: row;
     align-items: center;
 }
+
+/* Responsive - Media query */
