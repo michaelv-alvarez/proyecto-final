@@ -416,7 +416,7 @@ form textarea:focus {
     grid-area: footer;
     background-color: #151D1B;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     justify-items: center;
 }
@@ -426,13 +426,16 @@ form textarea:focus {
     align-self: center;
     justify-self: center;
 }
-
+.redes{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .redesContacto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* justify-content: center; */
-    /* padding: 2rem; */
     align-self: center;
 }
 
@@ -468,7 +471,7 @@ form textarea:focus {
 
 /* Responsive - Media query */
 /* Tamaño mobile */
-@media (max-width: 425px) {
+@media (max-width: 600px) {
 
     /* Inicio */
     .contenedorInicio {
@@ -490,11 +493,13 @@ form textarea:focus {
     .footer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         justify-items: center;
         align-items: center;
     }
-
+    .redesContacto{
+        justify-self: center;
+    }
     .nosotrosInicio p {
         font-size: 1.5rem;
     }
@@ -518,5 +523,55 @@ form textarea:focus {
     }
     .header{
         background-position: 50%;
+    }
+    .main{
+        padding: 0;
+    }
+    .nosotrosInicio p{
+        padding: 0.5rem;
+    }
+}
+@media (max-width: 700px){
+    .mapa iframe{
+        width: 100%;
+    }
+    .mapa{
+        width: 100%;
+    }
+}
+@media (max-width: 1050px) {
+    .header{
+        background-position: 50%;
+    }
+
+    .imagenPrincipal{
+        width: 100%;
+    }
+    .acaInicio{
+        flex-direction: column;
+        
+    }
+    .main{
+        padding: 0;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .redesContacto{
+        justify-self: center;
+    }
+}
+@media (max-width: 1240px){
+    .acaInicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagenPrincipal{
+        width: 100%;
     }
 }
