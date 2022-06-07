@@ -512,6 +512,10 @@ form textarea:focus {
     .conocenosPortada h2 {
         font-size: 4.5rem;
     }
+    /* galeria */
+    .galeria{
+        padding: 1rem;
+    }
 
 }
 
@@ -553,7 +557,7 @@ form textarea:focus {
         justify-self: center;
     }
 
-    /* productos */
+    /* productos, galeria, acerca de */
     .productosPortada,
     .medidaPortada,
     .portadaGaleria,
@@ -575,6 +579,15 @@ form textarea:focus {
         grid-template-columns: 1fr;
         padding: 2rem 0;
         gap: 1rem;
+    }
+    /* Acerca de */
+    .conocenosHistoria{
+        align-items: center;
+    }
+
+    .conocenosHistoria img{
+        width: 60%;
+        height: 60%;
     }
 }
 
@@ -617,14 +630,9 @@ form textarea:focus {
 
     .navBar ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
     }
-
-    .navBar li {
-        width: 100%;
-    }
-
     /* inicio */
     .contenedorInicio {
         display: grid;
@@ -661,4 +669,12 @@ form textarea:focus {
     .contenedorGeneral {
         padding: 1rem .5rem;
     }
+    /* productos, galeria, acerca de */
+    .productosPortada,
+    .medidaPortada,
+    .portadaGaleria,
+    .conocenosPortada {
+        padding: 2rem 0;
+    }
+
 }
