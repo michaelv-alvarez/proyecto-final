@@ -64,8 +64,8 @@
 }
 
 .navBar li:hover {
-    /* background-color: #BEA88E; */
-    border-bottom: 3px solid #BEA88E;
+    transition: 1s;
+    border-bottom: 2px solid #BEA88E;
 }
 
 .navBar a {
@@ -185,6 +185,9 @@
 
 .btn:hover {
     background-color: #BEA88E;
+    animation: pulse;
+    animation-duration: 2s;
+    box-shadow: #151D1B 1px 1px 1px;
 }
 
 .medidaPortada {
@@ -392,6 +395,7 @@ form textarea {
 .form input[type=text]:focus,
 .form input[type=email]:focus,
 form textarea:focus {
+    transition: 2s;
     border-bottom: solid 2px #151D1B;
 }
 
@@ -512,8 +516,9 @@ form textarea:focus {
     .conocenosPortada h2 {
         font-size: 4.5rem;
     }
+
     /* galeria */
-    .galeria{
+    .galeria {
         padding: 1rem;
     }
 
@@ -580,12 +585,13 @@ form textarea:focus {
         padding: 2rem 0;
         gap: 1rem;
     }
+
     /* Acerca de */
-    .conocenosHistoria{
+    .conocenosHistoria {
         align-items: center;
     }
 
-    .conocenosHistoria img{
+    .conocenosHistoria img {
         width: 60%;
         height: 60%;
     }
@@ -633,6 +639,7 @@ form textarea:focus {
         flex-direction: column;
         justify-content: center;
     }
+
     /* inicio */
     .contenedorInicio {
         display: grid;
@@ -665,10 +672,12 @@ form textarea:focus {
     .acaInicio h2 {
         font-size: 2rem;
     }
+
     /* contacto */
     .contenedorGeneral {
         padding: 1rem .5rem;
     }
+
     /* productos, galeria, acerca de */
     .productosPortada,
     .medidaPortada,
