@@ -484,11 +484,15 @@ form textarea:focus {
         flex-direction: column;
         align-items: center;
     }
-
+    .main{
+        padding: 1rem 0;
+    }
+    .nosotrosInicio h2{
+        text-align: center;
+    }
     .imagenPrincipal {
         width: 100%;
     }
-
     /* Productos */
     .productos {
         grid-template-columns: 1fr 1fr;
@@ -520,6 +524,10 @@ form textarea:focus {
     /* galeria */
     .galeria {
         padding: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .imagen4,.imagen5,.imagen10,.imagen12{
+        display: none;
     }
 
 }
@@ -542,7 +550,7 @@ form textarea:focus {
     }
 
     .main {
-        padding: 0;
+        padding: 1rem 0;
     }
 
     /* footer */
@@ -658,21 +666,13 @@ form textarea:focus {
     }
 
     .main {
-        padding: 0;
+        padding: 1rem 0;
     }
 
-    .nosotrosInicio p {
-        padding: 0.5rem;
+    .nosotrosInicio p{
+        padding: 1rem 0;
     }
-
-    .nosotrosInicio p {
-        font-size: 1.5rem;
-    }
-
-    .acaInicio h2 {
-        font-size: 2rem;
-    }
-
+    
     /* contacto */
     .contenedorGeneral {
         padding: 1rem .5rem;
