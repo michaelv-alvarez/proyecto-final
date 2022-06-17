@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <!--  Font awesome -->
     <script src="https://kit.fontawesome.com/083d158d3a.js" crossorigin="anonymous"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/favicon.ico">
     <!-- style css -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Galeria</title>
+    <title>Inicio</title>
 </head>
 
 <body>
@@ -27,27 +28,25 @@
             <!-- Slogan -->
             <h1>Todo lo que buscas en un solo lugar</h1>
         </div>
-        <!-- Menu de navegacion -->
-        <nav class="navBar">
-            <!-- Lista de navegacion -->
-            <ul>
-                <li>
-                    <a href="./index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./productos.html">Productos</a>
-                </li>
-                <li>
-                    <a href="./galeria.html">Galeria</a>
-                </li>
-                <li>
-                    <a href="./acerca-de.html">Acerca de</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+       <!-- Menu de navegacion Bootstrap -->
+       <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid contenedor-boton">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                    <a class="nav-link" href="./productos.html">Productos</a>
+                    <a class="nav-link" href="./galeria.html">Galeria</a>
+                    <a class="nav-link" href="./acerca-de.html">Nosotros</a>
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     </header>
     <!-- Main -->
     <main>
