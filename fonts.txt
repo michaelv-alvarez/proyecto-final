@@ -1,4 +1,0 @@
-font-family: 'Maitree', serif;
-font-family: 'Maven Pro', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Open Sans', sans-serif;

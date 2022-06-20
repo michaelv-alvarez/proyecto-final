@@ -127,7 +127,7 @@
 
 .nosotrosInicio h3 {
     margin-bottom: .5rem;
-    font-weight: 600;
+    font-weight: bold;
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
 }
@@ -371,7 +371,11 @@
     grid-row-start: 6;
     grid-row-end: 7;
 }
-
+/* Custom lightbox */
+.lightbox .lb-image{
+    border-radius: 0px;
+    border: 0px solid #fff;
+}
 /* ACERCA DE */
 .conocenosPortada {
     background-image: url(../img/SN_CIUDAD_blow.jpg);
@@ -385,31 +389,117 @@
     justify-content: center;
 }
 
-.conocenosHistoria {
+.conocenos {
     display: flex;
     flex-direction: row;
-    padding: 2rem;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
 }
 
-.añoHistoria {
+.conocenos section {
+    width: 30%;
+}
+
+.conocenos h3 {
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+}
+
+.conocenos h3 span {
+    font-weight: bold;
+}
+
+.conocenos p {
+    text-align: justify;
+    font-weight: 400;
+    font-family: 'Maven Pro', sans-serif;
+    margin: 0;
+    font-size: 1rem;
+}
+.conocenos img {
+    width: 50%;
+    border-radius: .3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.divisor {
+    position: relative;
+    margin: 4rem 0;
+    height: 1px;
+}
+
+.div-transparente:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    /* background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent); */
+    background-image: linear-gradient(to right, transparent, #a1a7a6, transparent);
+}
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+    margin: 0 1rem 2rem;
+}
+
+.imgHistoria {
+    width: 100%;
+    height: 450px;
+    border-radius: .25rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 25%;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-.añoHistoria h3 {
-    margin-bottom: 1rem;
+.imgHistoria h3 {
     font-family: 'Open sans', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.añoHistoria p {
+.imgHistoria p {
     text-align: justify;
     font-family: 'Maven Pro', sans-serif;
     font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.imgHistoria p,
+.imgHistoria h3 {
+    margin: .5rem 1rem;
+}
+
+.img1 {
+    background-image: url(../img/comienzo.jpg);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.img2 {
+    background-image: url(../img/avance.jpg);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.img3 {
+    background-image: url(../img/mejoras.jpg);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.img4 {
+    background-image: url(../img/actual.jpg);
+    background-position: 90%;
+    background-size: cover;
 }
 
 /* CONTACTO */
@@ -420,8 +510,11 @@
 }
 
 .contacto {
-    align-self: flex-start;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .contacto h3 {
@@ -431,15 +524,21 @@
     font-size: 1.8rem;
 }
 
-.contacto p {
+.contacto p,
+.contacto ul li {
     font-weight: 400;
     font-family: 'Maven Pro', sans-serif;
     margin: 0;
     font-size: 1rem;
 }
+
+.contacto ul li span {
+    font-weight: bold;
+}
+
 .seccionFormulario,
 .contacto {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .formulario {
@@ -607,7 +706,14 @@ form textarea:focus {
     }
 
 }
-
+@media(max-width: 1070px){
+    .conocenos{
+        flex-direction: column-reverse;
+    }
+    .conocenos section ,.conocenos img{
+        width: 80%;
+    }
+}
 @media (max-width: 1050px) {
 
     /* header */
@@ -656,7 +762,12 @@ form textarea:focus {
     /* contacto */
     .contenedorGeneral {
         grid-template-columns: 1fr;
-        padding: 2rem;
+        padding: 1rem 0;
+    }
+
+    .contacto {
+        flex-direction: row;
+        width: 100%;
     }
 }
 
@@ -670,13 +781,8 @@ form textarea:focus {
     }
 
     /* Acerca de */
-    .conocenosHistoria {
-        align-items: center;
-    }
-
-    .conocenosHistoria img {
-        width: 60%;
-        height: 60%;
+    .historia{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -738,7 +844,7 @@ form textarea:focus {
 
     /* contacto */
     .contenedorGeneral {
-        padding: 1rem .5rem;
+        padding: 1rem 0;
     }
 
     /* productos, galeria, acerca de */
@@ -763,5 +869,11 @@ form textarea:focus {
     .conocenosPortada h2 {
         font-size: 3rem;
     }
-
+    /* Acerca de */
+    .conocenos section, .conocenos img{
+        width: 95%;
+    }
+    .historia{
+        grid-template-columns: 1fr;
+    }
 }
